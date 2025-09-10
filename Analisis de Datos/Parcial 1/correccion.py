@@ -43,6 +43,12 @@ def procesar_datos_extra(df):
     
     # Limpiar nombres de columnas (quitar espacios extras)
     df.columns = df.columns.str.strip()
+    
+    # Renombrar columnas sin nombre (Unnamed:)
+    for i, col in enumerate(df.columns):
+        if col.startswith('Unnamed:'):
+            df = df.rename(columns={col: f'ExtraCol_{i}'})
+    
     todas_columnas = list(df.columns)
     
     print(f"Procesando columnas: {todas_columnas}")  # Debug
@@ -50,42 +56,50 @@ def procesar_datos_extra(df):
     # Identificar columnas principales presentes
     columnas_principales_presentes = [col for col in COLUMNAS_PRINCIPALES if col in todas_columnas]
     
-    # Si la columna "Datos extra" ya existe
-    if COLUMNA_DATOS_EXTRA in todas_columnas:
-        # Asegurarse de que no tenga valores NaN
-        df[COLUMNA_DATOS_EXTRA] = df[COLUMNA_DATOS_EXTRA].fillna("")
-        df[COLUMNA_DATOS_EXTRA] = df[COLUMNA_DATOS_EXTRA].astype(str)
-        df[COLUMNA_DATOS_EXTRA] = df[COLUMNA_DATOS_EXTRA].replace("nan", "")
+    # Identificar todas las columnas extras (incluyendo "Datos extra" original si existe)
+    columnas_no_principales = [col for col in todas_columnas if col not in COLUMNAS_PRINCIPALES]
+    
+    # Si hay columnas extras o "Datos extra"
+    if columnas_no_principales:
+        # Si ya existe "Datos extra", guardar sus valores
+        datos_extra_existentes = None
+        if COLUMNA_DATOS_EXTRA in columnas_no_principales:
+            datos_extra_existentes = df[COLUMNA_DATOS_EXTRA].fillna("")
+            columnas_no_principales.remove(COLUMNA_DATOS_EXTRA)
         
-        # Si todos los valores están vacíos, eliminar la columna
-        if df[COLUMNA_DATOS_EXTRA].str.strip().eq("").all():
-            df = df.drop(columns=[COLUMNA_DATOS_EXTRA])
-            columnas_finales = columnas_principales_presentes
+        # Procesar las columnas extras restantes
+        if columnas_no_principales:
+            # Concatenar todas las columnas extras
+            def concatenar_extras(row):
+                partes = []
+                # Primero agregar el valor de "Datos extra" si existía
+                if datos_extra_existentes is not None and row.name < len(datos_extra_existentes):
+                    val = datos_extra_existentes.iloc[row.name]
+                    if pd.notna(val) and str(val).strip() != "":
+                        partes.append(str(val))
+                
+                # Luego agregar las otras columnas extras
+                for col in columnas_no_principales:
+                    val = row[col]
+                    if pd.notna(val) and str(val).strip() != "":
+                        # Si la columna tiene un nombre significativo, incluirlo
+                        if not col.startswith('ExtraCol_'):
+                            partes.append(f"{col}: {val}")
+                        else:
+                            partes.append(str(val))
+                
+                return " | ".join(partes)
+            
+            df[COLUMNA_DATOS_EXTRA] = df.apply(concatenar_extras, axis=1)
         else:
-            columnas_finales = columnas_principales_presentes + [COLUMNA_DATOS_EXTRA]
-    else:
-        # Identificar columnas extras (que no son las principales)
-        columnas_extras = [col for col in todas_columnas if col not in COLUMNAS_PRINCIPALES]
+            # Solo renombrar/limpiar la columna existente
+            if datos_extra_existentes is not None:
+                df[COLUMNA_DATOS_EXTRA] = datos_extra_existentes
         
-        if columnas_extras:
-            # Crear nueva columna con los datos concatenados
-            datos_extra_series = df[columnas_extras].apply(
-                lambda row: ' | '.join([f"{col}: {row[col]}" for col in columnas_extras 
-                                       if pd.notna(row[col]) and str(row[col]).strip() != ""]), 
-                axis=1
-            )
-            
-            # Solo agregar la columna si tiene algún dato
-            if not datos_extra_series.str.strip().eq("").all():
-                df[COLUMNA_DATOS_EXTRA] = datos_extra_series
-                columnas_finales = columnas_principales_presentes + [COLUMNA_DATOS_EXTRA]
-            else:
-                columnas_finales = columnas_principales_presentes
-            
-            # Eliminar las columnas extras originales
-            df = df.drop(columns=columnas_extras)
-        else:
-            columnas_finales = columnas_principales_presentes
+        # Eliminar todas las columnas extras (excepto la nueva "Datos extra")
+        columnas_a_eliminar = [col for col in columnas_no_principales if col in df.columns]
+        if columnas_a_eliminar:
+            df = df.drop(columns=columnas_a_eliminar)
     
     # Limpiar NaN en todas las columnas
     for col in df.columns:
@@ -93,11 +107,23 @@ def procesar_datos_extra(df):
         if df[col].dtype == 'object':
             df[col] = df[col].astype(str).replace("nan", "")
     
-    # Reordenar y seleccionar solo las columnas finales
+    # Si la columna "Datos extra" existe y está toda vacía, eliminarla
+    if COLUMNA_DATOS_EXTRA in df.columns and df[COLUMNA_DATOS_EXTRA].str.strip().eq("").all():
+        df = df.drop(columns=[COLUMNA_DATOS_EXTRA])
+        columnas_finales = columnas_principales_presentes
+    else:
+        # Reordenar columnas: primero las principales, luego Datos extra
+        columnas_finales = columnas_principales_presentes
+        if COLUMNA_DATOS_EXTRA in df.columns:
+            columnas_finales.append(COLUMNA_DATOS_EXTRA)
+    
+    # Seleccionar solo las columnas finales
     df = df[columnas_finales]
     
     print(f"DataFrame procesado: {df.shape}")  # Debug
     print(f"Columnas finales: {list(df.columns)}")  # Debug
+    if COLUMNA_DATOS_EXTRA in df.columns:
+        print(f"Muestra de datos extra:\n{df[COLUMNA_DATOS_EXTRA].head()}")
     
     return df
 
@@ -257,7 +283,7 @@ def edit_row(item):
         # Crear entry con estilo según validación
         if col == COLUMNA_DATOS_EXTRA:
             # Para datos extra, usar un campo de texto más grande
-            entry = ttk.Entry(field_frame, width=50, bootstyle="info")
+            entry = ttk.Entry(field_frame, width=50, bootstyle="warning")
         else:
             entry = ttk.Entry(field_frame, width=30, 
                              bootstyle="default" if is_valid else "danger")
@@ -281,15 +307,25 @@ def edit_row(item):
         for col, patron in patrones.items():
             if col in row and row[col] != "" and not validar(row[col], patron):
                 campos_invalidos.append(f"{col}: {row[col]}")
+        
+        # Verificar si tiene datos extra
+        tiene_datos_extra = False
+        if COLUMNA_DATOS_EXTRA in row and row[COLUMNA_DATOS_EXTRA].strip() != "":
+            tiene_datos_extra = True
+            campos_invalidos.append(f"Datos extra: El registro contiene campos adicionales que deben ser eliminados")
 
         if campos_invalidos:
             mensaje = "Los siguientes campos no son correctos:\n" + "\n".join(campos_invalidos)
+            if tiene_datos_extra:
+                mensaje += "\n\nPara guardar en registros válidos, elimine el contenido de 'Datos extra'"
             Messagebox.show_error(title="Error de validación", message=mensaje)
             return
 
-        # Guardar en validos.csv
+        # Guardar en validos.csv (sin la columna de datos extra si existe)
+        row_para_guardar = {k: v for k, v in row.items() if k != COLUMNA_DATOS_EXTRA}
+        
         file_exists = os.path.exists(FILE_VALIDOS)
-        pd.DataFrame([row]).to_csv(
+        pd.DataFrame([row_para_guardar]).to_csv(
             FILE_VALIDOS, index=False, mode="a", header=not file_exists
         )
 
@@ -361,17 +397,42 @@ if os.path.exists(FILE_INVALIDOS):
             update_status("El archivo inválidos.csv está vacío. No hay registros pendientes.")
             cargar_tabla(df)  # Cargar tabla vacía
         else:
-            # Intentar leer el CSV con diferentes configuraciones
+            # Leer el CSV sin especificar el número de columnas para permitir columnas extras
             try:
-                # Primero intentar leer normalmente
-                df = pd.read_csv(FILE_INVALIDOS)
-            except:
-                # Si falla, intentar con quote char
+                # Leer permitiendo que pandas detecte todas las columnas
+                df = pd.read_csv(FILE_INVALIDOS, skipinitialspace=True)
+            except Exception as e1:
                 try:
+                    # Si falla, intentar con configuración alternativa
                     df = pd.read_csv(FILE_INVALIDOS, quotechar='"', quoting=1)
-                except:
-                    # Si aún falla, leer línea por línea
-                    df = pd.read_csv(FILE_INVALIDOS, error_bad_lines=False)
+                except Exception as e2:
+                    # Como último recurso, leer línea por línea
+                    with open(FILE_INVALIDOS, 'r', encoding='utf-8') as f:
+                        lines = f.readlines()
+                    
+                    # Procesar manualmente si es necesario
+                    import csv
+                    reader = csv.reader(lines)
+                    data = list(reader)
+                    if len(data) > 0:
+                        # Encontrar el número máximo de columnas
+                        max_cols = max(len(row) for row in data)
+                        headers = data[0]
+                        # Agregar encabezados para columnas sin nombre
+                        while len(headers) < max_cols:
+                            headers.append(f"ExtraCol_{len(headers)}")
+                        
+                        # Crear DataFrame
+                        rows = []
+                        for row in data[1:]:
+                            # Asegurar que todas las filas tengan el mismo número de columnas
+                            while len(row) < max_cols:
+                                row.append("")
+                            rows.append(row[:max_cols])
+                        
+                        df = pd.DataFrame(rows, columns=headers)
+                    else:
+                        df = pd.DataFrame(columns=COLUMNAS_PRINCIPALES)
             
             # Debug: imprimir información del DataFrame
             print(f"Columnas encontradas: {list(df.columns)}")
