@@ -1,6 +1,7 @@
 ANÁLISIS DE FRECUENCIA DE PALABRAS
 ==================================================
 
+Workers utilizados: 8
 Total de palabras únicas: 26719
 Total de palabras: 641126
 
