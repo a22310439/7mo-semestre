@@ -1,0 +1,58 @@
+ANÁLISIS DE FRECUENCIA DE PALABRAS
+==================================================
+
+Total de palabras únicas: 26719
+Total de palabras: 641126
+
+PALABRAS MÁS FRECUENTES:
+--------------------------------------------------
+the                                 20711
+a                                   17954
+in                                  16037
+to                                  10245
+of                                   9510
+pandas                               9195
+dataframe                            7936
+series                               7329
+data                                 7073
+pd                                   6086
+index                                6063
+for                                  5537
+b                                    5420
+is                                   5348
+and                                  5269
+dtype                                5069
+with                                 5053
+df                                   4887
+nan                                  4582
+out                                  4522
+or                                   4507
+python                               4413
+release                              4343
+true                                 3944
+analysis                             3756
+powerful                             3734
+toolkit                              3723
+none                                 3689
+false                                3568
+c                                    3545
+be                                   3541
+on                                   3405
+values                               3316
+s                                    3312
+if                                   3305
+columns                              3235
+default                              3122
+bug                                  2724
+object                               2702
+are                                  2667
+as                                   2652
+will                                 2567
+from                                 2560
+an                                   2520
+not                                  2329
+axis                                 2233
+this                                 2209
+np                                   2184
+by                                   2129
+when                                 2102
