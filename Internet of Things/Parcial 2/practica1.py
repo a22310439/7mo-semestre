@@ -10,7 +10,7 @@ while True:
     if entrada.lower() == 'fin':
         break
     try:
-        numeros.append(float(entrada))
+        numeros.append(int(entrada))
     except ValueError:
         print("Por favor ingresa un número válido")
 
@@ -22,7 +22,7 @@ sublista_mitad = numeros[mitad:mitad+2]
 print(f"\n1. Sublista de 2 elementos en la mitad: {sublista_mitad}")
 
 # 2. Imprimir primer y último elemento en una sola línea
-print(f"2. Primer y último elemento: {numeros[0]}, {numeros[-1]}")
+print(f"\n2. Primer y último elemento: {numeros[0]}, {numeros[-1]}")
 
 # 3. Agregar los elementos de la lista al final de la misma
 numeros.extend(numeros.copy())
@@ -33,7 +33,7 @@ numeros.sort()
 print(f"\n4. Lista ordenada de menor a mayor: {numeros}")
 
 # 5. Ordenar de mayor a menor
-print(f"\n5. Lista ordenada de mayor a menor: {numeros.sort(reverse=True)}")
+print(f"\n5. Lista ordenada de mayor a menor: {numeros.sort(reverse=True) or numeros}")
 
 # 6. Función que devuelve el cubo de los elementos
 def cubo_elementos(lista):
