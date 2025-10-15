@@ -21,13 +21,19 @@ class PDFWordAnalyzer:
         self.pdf_path = pdf_path
         self.word_counts = Counter()
         self.num_workers = num_workers or os.cpu_count()
-        self.callback = callback  # Para actualizar la UI
+        self.callback = callback
         self.analysis_time = 0
+        self.pages_data = []  # Almacenar datos de páginas para búsqueda
         
     def clean_text(self, text: str) -> List[str]:
         text = text.lower()
         words = re.findall(r'\b[a-záéíóúñü]+\b', text)
         return words
+    
+    def extract_paragraphs(self, text: str) -> List[str]:
+        """Divide el texto en párrafos"""
+        paragraphs = [p.strip() for p in text.split('\n') if p.strip()]
+        return paragraphs
     
     def process_pages_batch(self, pages_data: List[Tuple[int, str]]) -> Counter:
         batch_counter = Counter()
@@ -52,7 +58,7 @@ class PDFWordAnalyzer:
         return batches
     
     def analyze(self):
-        start_time = time.time()  # Iniciar contador de tiempo
+        start_time = time.time()
         
         if self.callback:
             self.callback(f"Abriendo PDF: {self.pdf_path}")
@@ -65,14 +71,23 @@ class PDFWordAnalyzer:
                 if self.callback:
                     self.callback(f"Total de páginas: {total_pages}")
                 
-                # Extraer texto de todas las páginas primero
+                # Extraer texto de todas las páginas y guardar para búsqueda
                 if self.callback:
                     self.callback("Extrayendo texto...")
                 pages_text = []
+                self.pages_data = []
+                
                 for page_num in range(total_pages):
                     page = pdf_reader.pages[page_num]
                     page_text = page.extract_text()
                     pages_text.append((page_num, page_text))
+                    
+                    # Guardar párrafos de cada página
+                    paragraphs = self.extract_paragraphs(page_text)
+                    self.pages_data.append({
+                        'page_num': page_num + 1,
+                        'paragraphs': paragraphs
+                    })
                 
                 # Distribuir páginas entre workers
                 batches = self.distribute_pages(total_pages, pages_text)
@@ -81,13 +96,11 @@ class PDFWordAnalyzer:
                 
                 # Procesar con ThreadPoolExecutor
                 with ThreadPoolExecutor(max_workers=self.num_workers) as executor:
-                    # Enviar trabajos
                     futures = {
                         executor.submit(self.process_pages_batch, batch): i 
                         for i, batch in enumerate(batches)
                     }
                     
-                    # Recolectar resultados a medida que se completan
                     for future in as_completed(futures):
                         batch_num = futures[future]
                         try:
@@ -99,7 +112,7 @@ class PDFWordAnalyzer:
                             if self.callback:
                                 self.callback(f"Error en lote {batch_num}: {str(e)}")
                 
-                self.analysis_time = time.time() - start_time  # Calcular tiempo total
+                self.analysis_time = time.time() - start_time
                 
                 if self.callback:
                     self.callback(f"Análisis completado!")
@@ -114,49 +127,94 @@ class PDFWordAnalyzer:
             if self.callback:
                 self.callback(f"Error al procesar el PDF: {str(e)}")
     
-    def get_top_words(self, n: int = None, exclude_common: bool = False) -> List[tuple]:
-        if exclude_common:
-            # Stop words comunes en español
-            stop_words = {
-                'el', 'la', 'de', 'que', 'y', 'a', 'en', 'un', 'ser', 'se',
-                'no', 'haber', 'por', 'con', 'su', 'para', 'como', 'estar',
-                'tener', 'le', 'lo', 'todo', 'pero', 'más', 'hacer', 'o',
-                'poder', 'decir', 'este', 'ir', 'otro', 'ese', 'si', 'me',
-                'ya', 'ver', 'porque', 'dar', 'cuando', 'él', 'muy', 'sin',
-                'vez', 'mucho', 'saber', 'qué', 'sobre', 'mi', 'alguno',
-                'mismo', 'yo', 'también', 'hasta', 'año', 'dos', 'querer',
-                'entre', 'así', 'primero', 'desde', 'grande', 'eso', 'ni',
-                'nos', 'llegar', 'pasar', 'tiempo', 'ella', 'sí', 'día',
-                'uno', 'bien', 'poco', 'deber', 'entonces', 'poner', 'cosa',
-                'tanto', 'hombre', 'parecer', 'nuestro', 'tan', 'donde',
-                'ahora', 'parte', 'después', 'vida', 'quedar', 'siempre',
-                'creer', 'hablar', 'llevar', 'dejar', 'nada', 'cada', 'seguir',
-                'menos', 'nuevo', 'encontrar', 'algo', 'solo', 'decir', 'salir',
-                'volver', 'tomar', 'conocer', 'vivir', 'sentir', 'tratar',
-                'mirar', 'contar', 'empezar', 'esperar', 'buscar', 'existir',
-                'entrar', 'trabajar', 'escribir', 'perder', 'producir', 'ocurrir'
-            }
-            filtered_counts = {
-                word: count for word, count in self.word_counts.items()
-                if word not in stop_words and len(word) > 2
-            }
-            counter = Counter(filtered_counts)
-        else:
-            counter = self.word_counts
+    def search_phrase(self, words: List[str]) -> List[Dict]:
+        """
+        Busca frases compuestas por las palabras dadas, donde cada palabra
+        está separada de las demás por máximo 2 palabras.
+        """
+        results = []
+        words = [w.lower().strip() for w in words if w.strip()]
         
+        if not words:
+            return results
+        
+        for page_data in self.pages_data:
+            page_num = page_data['page_num']
+            
+            for para_num, paragraph in enumerate(page_data['paragraphs'], 1):
+                # Limpiar y obtener palabras del párrafo
+                para_words = self.clean_text(paragraph)
+                
+                # Buscar la frase en el párrafo
+                if self.is_phrase_valid(para_words, words):
+                    results.append({
+                        'page': page_num,
+                        'paragraph': para_num,
+                        'context': paragraph[:200] + '...' if len(paragraph) > 200 else paragraph
+                    })
+        
+        return results
+    
+    def is_phrase_valid(self, text_words: List[str], search_words: List[str]) -> bool:
+        """
+        Verifica si las palabras de búsqueda aparecen en el texto con máximo 2 palabras de separación.
+        """
+        if not search_words or not text_words:
+            return False
+        
+        # Para cada posible inicio
+        for i in range(len(text_words)):
+            if self.check_phrase_from_position(text_words, search_words, i):
+                return True
+        
+        return False
+    
+    def check_phrase_from_position(self, text_words: List[str], search_words: List[str], start: int) -> bool:
+        """
+        Verifica si la frase comienza en la posición start con las restricciones de distancia.
+        """
+        if start >= len(text_words):
+            return False
+        
+        # Si solo hay una palabra, buscar coincidencia directa
+        if len(search_words) == 1:
+            return search_words[0] in text_words[start:]
+        
+        # Buscar la primera palabra
+        if text_words[start] != search_words[0]:
+            return False
+        
+        current_pos = start
+        
+        # Para cada palabra subsecuente
+        for search_word in search_words[1:]:
+            # Buscar la siguiente palabra dentro de las próximas 3 posiciones (0, 1, 2 palabras de separación)
+            found = False
+            for offset in range(1, 4):  # 1, 2, 3 posiciones adelante
+                next_pos = current_pos + offset
+                if next_pos < len(text_words) and text_words[next_pos] == search_word:
+                    current_pos = next_pos
+                    found = True
+                    break
+            
+            if not found:
+                return False
+        
+        return True
+    
+    def get_top_words(self, n: int = None) -> List[tuple]:
         if n:
-            return counter.most_common(n)
+            return self.word_counts.most_common(n)
         else:
-            return counter.most_common()  # Retornar todas las palabras
+            return self.word_counts.most_common()
 
 class ScrollableHeatmap(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
         
-        # Canvas y scrollbar
-        self.canvas = Canvas(self, bg='#212121', highlightthickness=0, bd=0)  # Sin borde
+        self.canvas = Canvas(self, bg='#212121', highlightthickness=0, bd=0)
         self.scrollbar = ctk.CTkScrollbar(self, orientation="vertical", command=self.canvas.yview)
-        self.scrollable_frame = Frame(self.canvas, bg='#212121', bd=0)  # Sin borde
+        self.scrollable_frame = Frame(self.canvas, bg='#212121', bd=0)
         
         self.scrollable_frame.bind(
             "<Configure>",
@@ -169,7 +227,6 @@ class ScrollableHeatmap(ctk.CTkFrame):
         self.canvas.pack(side="left", fill="both", expand=True, padx=0, pady=0)
         self.scrollbar.pack(side="right", fill="y", padx=0, pady=0)
         
-        # Bind mouse wheel
         self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
         self.canvas.bind_all("<Button-4>", self._on_mousewheel)
         self.canvas.bind_all("<Button-5>", self._on_mousewheel)
@@ -190,20 +247,17 @@ class PDFAnalyzerApp(ctk.CTk):
         super().__init__()
 
         self.title("Analizador de Palabras en PDF")
-        self.geometry("1200x800")
+        self.geometry("1400x900")
         
-        # Maximizar la ventana después de inicializar
         self.after(10, lambda: self.state('zoomed'))
         
-        # Inicializar variables
         self.analyzer = None
         self.pdf_path = None
-        self.exclude_common_var = ctk.BooleanVar(value=False)
         
         self.setup_ui()
         
     def setup_ui(self):
-        # Frame principal
+        # Frame principal con dos columnas
         self.main_container = ctk.CTkFrame(self)
         self.main_container.pack(fill="both", expand=True, padx=10, pady=10)
         
@@ -211,7 +265,6 @@ class PDFAnalyzerApp(ctk.CTk):
         self.control_frame = ctk.CTkFrame(self.main_container)
         self.control_frame.pack(fill="x", padx=10, pady=10)
         
-        # Botón para seleccionar PDF
         self.select_button = ctk.CTkButton(
             self.control_frame, 
             text="Seleccionar PDF", 
@@ -221,7 +274,6 @@ class PDFAnalyzerApp(ctk.CTk):
         )
         self.select_button.pack(side="left", padx=10)
         
-        # Label para mostrar el archivo seleccionado
         self.file_label = ctk.CTkLabel(
             self.control_frame, 
             text="No se ha seleccionado ningún archivo",
@@ -229,7 +281,6 @@ class PDFAnalyzerApp(ctk.CTk):
         )
         self.file_label.pack(side="left", padx=10, expand=True, fill="x")
         
-        # Botón para analizar
         self.analyze_button = ctk.CTkButton(
             self.control_frame, 
             text="Analizar PDF", 
@@ -240,8 +291,6 @@ class PDFAnalyzerApp(ctk.CTk):
         )
         self.analyze_button.pack(side="left", padx=10)
         
-        
-        # Botón para guardar resultados
         self.save_button = ctk.CTkButton(
             self.control_frame, 
             text="Guardar Resultados", 
@@ -252,24 +301,24 @@ class PDFAnalyzerApp(ctk.CTk):
         )
         self.save_button.pack(side="left", padx=10)
         
-        # Frame contenedor para el contenido principal (dividido en dos)
-        self.content_frame = ctk.CTkFrame(self.main_container)
-        self.content_frame.pack(fill="both", expand=True, padx=10, pady=10)
+        # Frame contenedor principal dividido en dos columnas
+        self.content_container = ctk.CTkFrame(self.main_container)
+        self.content_container.pack(fill="both", expand=True, padx=10, pady=10)
         
-        # Frame izquierdo para el log
-        self.log_frame = ctk.CTkFrame(self.content_frame, width=400)
-        self.log_frame.pack(side="left", fill="y", padx=(0, 5))
-        self.log_frame.pack_propagate(False)
+        # COLUMNA IZQUIERDA: Log y Estadísticas
+        self.left_column = ctk.CTkFrame(self.content_container, width=400)
+        self.left_column.pack(side="left", fill="both", expand=False, padx=(0, 5))
+        self.left_column.pack_propagate(False)
         
-        self.log_label = ctk.CTkLabel(self.log_frame, text="Registro de Análisis", font=("Arial", 16, "bold"))
+        # Log
+        self.log_label = ctk.CTkLabel(self.left_column, text="Registro de Análisis", font=("Arial", 16, "bold"))
         self.log_label.pack(pady=10)
         
-        # Textbox para mostrar el progreso
-        self.log_text = ctk.CTkTextbox(self.log_frame, height=400)
+        self.log_text = ctk.CTkTextbox(self.left_column, height=300)
         self.log_text.pack(fill="both", expand=True, padx=10, pady=(0, 10))
         
-        # Frame para estadísticas
-        self.stats_frame = ctk.CTkFrame(self.log_frame)
+        # Estadísticas
+        self.stats_frame = ctk.CTkFrame(self.left_column)
         self.stats_frame.pack(fill="x", padx=10, pady=10)
         
         self.stats_label = ctk.CTkLabel(self.stats_frame, text="Estadísticas", font=("Arial", 14, "bold"))
@@ -284,19 +333,58 @@ class PDFAnalyzerApp(ctk.CTk):
         self.time_label = ctk.CTkLabel(self.stats_frame, text="Tiempo de análisis: -")
         self.time_label.pack()
         
-        # Frame derecho para el mapa de calor
-        self.heatmap_frame = ctk.CTkFrame(self.content_frame)
-        self.heatmap_frame.pack(side="right", fill="both", expand=True)
+        # BUSCADOR DE FRASES
+        self.search_frame = ctk.CTkFrame(self.left_column)
+        self.search_frame.pack(fill="both", expand=True, padx=10, pady=10)
         
-        self.heatmap_label = ctk.CTkLabel(self.heatmap_frame, text="Mapa de Calor", font=("Arial", 16, "bold"))
+        self.search_label = ctk.CTkLabel(self.search_frame, text="Buscador de Frases", font=("Arial", 14, "bold"))
+        self.search_label.pack(pady=10)
+        
+        self.search_info = ctk.CTkLabel(
+            self.search_frame, 
+            text="Ingresa hasta 3 palabras separadas por comas.\nEj: palabra1, palabra2, palabra3",
+            font=("Arial", 10),
+            text_color="gray"
+        )
+        self.search_info.pack(pady=5)
+        
+        # Frame para entrada y botón
+        self.search_input_frame = ctk.CTkFrame(self.search_frame)
+        self.search_input_frame.pack(fill="x", padx=10, pady=5)
+        
+        self.phrase_entry = ctk.CTkEntry(
+            self.search_input_frame,
+            placeholder_text="palabra1, palabra2, palabra3"
+        )
+        self.phrase_entry.pack(side="left", fill="x", expand=True, padx=(0, 5))
+        
+        self.search_button = ctk.CTkButton(
+            self.search_input_frame,
+            text="Buscar",
+            command=self.search_phrase,
+            width=100,
+            state="disabled"
+        )
+        self.search_button.pack(side="right")
+        
+        # Resultados de búsqueda
+        self.search_results_label = ctk.CTkLabel(self.search_frame, text="Resultados:", font=("Arial", 12, "bold"))
+        self.search_results_label.pack(pady=(10, 5))
+        
+        self.search_results = ctk.CTkTextbox(self.search_frame, height=200)
+        self.search_results.pack(fill="both", expand=True, padx=10, pady=(0, 10))
+        
+        # COLUMNA DERECHA: Mapa de Calor
+        self.right_column = ctk.CTkFrame(self.content_container)
+        self.right_column.pack(side="right", fill="both", expand=True)
+        
+        self.heatmap_label = ctk.CTkLabel(self.right_column, text="Mapa de Calor", font=("Arial", 16, "bold"))
         self.heatmap_label.pack(pady=10)
         
-        # Info label para mostrar número de palabras mostradas
-        self.info_label = ctk.CTkLabel(self.heatmap_frame, text="", font=("Arial", 12))
+        self.info_label = ctk.CTkLabel(self.right_column, text="", font=("Arial", 12))
         self.info_label.pack()
         
-        # Frame scrollable para el mapa de calor
-        self.canvas_frame = ScrollableHeatmap(self.heatmap_frame)
+        self.canvas_frame = ScrollableHeatmap(self.right_column)
         self.canvas_frame.pack(fill="both", expand=True, padx=10, pady=(0, 10))
         
         self.no_data_label = ctk.CTkLabel(
@@ -320,7 +408,6 @@ class PDFAnalyzerApp(ctk.CTk):
             self.log_text.insert("0.0", f"Archivo seleccionado: {filename}\n")
     
     def update_log(self, message):
-        """Actualiza el log en el hilo principal de la UI"""
         self.log_text.insert("end", f"{message}\n")
         self.log_text.see("end")
         self.update()
@@ -330,15 +417,14 @@ class PDFAnalyzerApp(ctk.CTk):
             messagebox.showerror("Error", "Por favor selecciona un archivo PDF primero")
             return
         
-        # Deshabilitar botones durante el análisis
         self.analyze_button.configure(state="disabled")
         self.select_button.configure(state="disabled")
         self.save_button.configure(state="disabled")
+        self.search_button.configure(state="disabled")
         
-        # Limpiar log
         self.log_text.delete("0.0", "end")
+        self.search_results.delete("0.0", "end")
         
-        # Ejecutar análisis en un hilo separado
         thread = threading.Thread(target=self.run_analysis)
         thread.start()
     
@@ -347,17 +433,66 @@ class PDFAnalyzerApp(ctk.CTk):
             self.analyzer = PDFWordAnalyzer(self.pdf_path, callback=self.update_log)
             self.analyzer.analyze()
             
-            # Actualizar estadísticas en el hilo principal
             self.after(0, self.update_stats)
             self.after(0, self.create_heatmap)
+            self.after(0, lambda: self.search_button.configure(state="normal"))
             
         except Exception as e:
             self.after(0, lambda: messagebox.showerror("Error", f"Error al analizar el PDF: {str(e)}"))
         finally:
-            # Rehabilitar botones
             self.after(0, lambda: self.analyze_button.configure(state="normal"))
             self.after(0, lambda: self.select_button.configure(state="normal"))
             self.after(0, lambda: self.save_button.configure(state="normal"))
+    
+    def search_phrase(self):
+        if not self.analyzer:
+            messagebox.showerror("Error", "Primero debes analizar un PDF")
+            return
+        
+        phrase_text = self.phrase_entry.get().strip()
+        if not phrase_text:
+            messagebox.showwarning("Advertencia", "Ingresa al menos una palabra")
+            return
+        
+        # Separar palabras por comas
+        words = [w.strip() for w in phrase_text.split(',') if w.strip()]
+        
+        if len(words) > 3:
+            messagebox.showwarning("Advertencia", "Ingresa máximo 3 palabras")
+            return
+        
+        # Deshabilitar botón durante búsqueda
+        self.search_button.configure(state="disabled")
+        self.search_results.delete("0.0", "end")
+        self.search_results.insert("0.0", "Buscando...\n")
+        
+        # Ejecutar búsqueda en hilo separado
+        thread = threading.Thread(target=self.run_search, args=(words,))
+        thread.start()
+    
+    def run_search(self, words):
+        try:
+            results = self.analyzer.search_phrase(words)
+            self.after(0, lambda: self.display_search_results(words, results))
+        except Exception as e:
+            self.after(0, lambda: messagebox.showerror("Error", f"Error en la búsqueda: {str(e)}"))
+        finally:
+            self.after(0, lambda: self.search_button.configure(state="normal"))
+    
+    def display_search_results(self, words, results):
+        self.search_results.delete("0.0", "end")
+        
+        phrase_display = ", ".join(words)
+        self.search_results.insert("0.0", f"Búsqueda: {phrase_display}\n")
+        self.search_results.insert("end", f"Resultados encontrados: {len(results)}\n")
+        self.search_results.insert("end", "=" * 50 + "\n\n")
+        
+        if not results:
+            self.search_results.insert("end", "No se encontraron coincidencias.\n")
+        else:
+            for i, result in enumerate(results, 1):
+                self.search_results.insert("end", f"[{i}] Página {result['page']}, Párrafo {result['paragraph']}\n")
+                self.search_results.insert("end", f"Contexto: {result['context']}\n\n")
     
     def update_stats(self):
         if self.analyzer and self.analyzer.word_counts:
@@ -368,23 +503,14 @@ class PDFAnalyzerApp(ctk.CTk):
             self.total_words_label.configure(text=f"Total de palabras: {total_words:,}")
             self.time_label.configure(text=f"Tiempo de análisis: {self.analyzer.analysis_time:.2f} segundos")
     
-    def update_heatmap(self):
-        if self.analyzer and self.analyzer.word_counts:
-            self.create_heatmap()
-    
     def create_heatmap(self):
         if not self.analyzer or not self.analyzer.word_counts:
             return
         
-        # Limpiar el canvas anterior
         for widget in self.canvas_frame.get_frame().winfo_children():
             widget.destroy()
         
-        # Obtener configuración
-        exclude_common = self.exclude_common_var.get()
-        
-        # Obtener todas las palabras
-        all_words = self.analyzer.get_top_words(n=None, exclude_common=exclude_common)
+        all_words = self.analyzer.get_top_words(n=None)
         
         if not all_words:
             self.no_data_label = ctk.CTkLabel(
@@ -396,82 +522,59 @@ class PDFAnalyzerApp(ctk.CTk):
             self.info_label.configure(text="")
             return
         
-        # Actualizar info label
-        filter_text = " (sin palabras comunes)" if exclude_common else ""
-        self.info_label.configure(text=f"Mostrando {len(all_words)} palabras{filter_text}")
+        self.info_label.configure(text=f"Mostrando {len(all_words)} palabras")
         
-        # Crear figura de matplotlib
-        # Calcular altura basada en número de palabras
         words, frequencies = zip(*all_words)
         total_words = len(words)
         
-        # Altura de la figura basada en el número de palabras
-        row_height = 0.25  # Altura por palabra en pulgadas
+        row_height = 0.25
         fig_height = max(8, total_words * row_height)
         
-        # Crear figura
         fig = plt.figure(figsize=(10, fig_height), facecolor='#212121')
-        
-        # Crear un solo eje para todo
         ax = fig.add_subplot(111)
         ax.set_facecolor('#212121')
         
-        # Normalizar frecuencias para el colormap
         freq_array = np.array(frequencies)
         freq_normalized = (freq_array - freq_array.min()) / (freq_array.max() - freq_array.min())
         
-        # Obtener el colormap
         cmap = plt.cm.get_cmap('YlOrRd')
         
-        # Crear datos para la barra de color continua
-        # Necesitamos crear una matriz 2D para imshow
         color_data = np.zeros((total_words, 1))
         for i in range(total_words):
-            # Invertir el índice para que las palabras más frecuentes estén arriba
             color_data[i, 0] = freq_normalized[i]
         
-        # Configurar límites del eje
         ax.set_xlim(0, 5)
         ax.set_ylim(-1, total_words + 1)
-        
-        # Ocultar ejes
         ax.axis('off')
         
-        # Posiciones X para las columnas
         colorbar_x = 0.3
         colorbar_width = 0.4
         word_x = 1.2
         freq_x = 4.5
         
-        # Dibujar la barra de color continua usando imshow
         im = ax.imshow(color_data, 
                     extent=[colorbar_x, colorbar_x + colorbar_width, -0.5, total_words - 0.5],
                     aspect='auto', 
                     cmap=cmap,
-                    interpolation='bilinear')  # Suavizar los colores
+                    interpolation='bilinear')
         
-        # Agregar borde a la barra de color
         rect = plt.Rectangle((colorbar_x, -0.5), colorbar_width, total_words, 
                             facecolor='none', edgecolor='white', linewidth=1)
         ax.add_patch(rect)
         
-        # Agregar texto para cada palabra
         for i in range(total_words):
             y_position = total_words - i - 1
             word = words[i]
             freq = frequencies[i]
             
-            # Palabra
             ax.text(word_x, y_position, word, va='center', ha='left', 
                 fontsize=10, fontweight='bold', color='white')
             
-            # Frecuencia
             ax.text(freq_x, y_position, str(freq), va='center', ha='right', 
                 fontsize=10, color='white',
                 bbox=dict(boxstyle='round,pad=0.3', facecolor='#424242', 
                         alpha=0.8, edgecolor='none'))
         
-        # Agregar encabezados
         header_y = total_words + 0.2
         ax.text(colorbar_x + colorbar_width/2, header_y, 'Color', 
             va='bottom', ha='center', fontsize=12, fontweight='bold', color='white')
@@ -480,28 +583,16 @@ class PDFAnalyzerApp(ctk.CTk):
         ax.text(freq_x - 0.2, header_y, 'Frecuencia', 
             va='bottom', ha='center', fontsize=12, fontweight='bold', color='white')
         
-        # Línea separadora del encabezado
         ax.plot([0, 5], [total_words - 0.5, total_words - 0.5], 'w-', linewidth=2)
         
-        # Título
-        title = f''
-        if exclude_common:
-            title += '\n(sin palabras comunes)'
-        ax.text(2.5, total_words + 0.8, title, 
-            va='bottom', ha='center', fontsize=14, fontweight='bold', color='white')
-        
-        # Ajustar márgenes para eliminar espacio en blanco
         plt.subplots_adjust(left=0.05, right=0.95, top=0.9998, bottom=0.01)
         
-        # Crear canvas de tkinter para mostrar la figura
         canvas = FigureCanvasTkAgg(fig, master=self.canvas_frame.get_frame())
         canvas.draw()
         
-        # Widget del canvas
         canvas_widget = canvas.get_tk_widget()
-        canvas_widget.pack(fill="both", expand=True, pady=0)  # Sin padding vertical
+        canvas_widget.pack(fill="both", expand=True, pady=0)
         
-        # Cerrar la figura para liberar memoria
         plt.close(fig)
     
     def save_results(self):
@@ -516,8 +607,6 @@ class PDFAnalyzerApp(ctk.CTk):
         
         if filename:
             try:
-                exclude_common = self.exclude_common_var.get()
-                
                 with open(filename, 'w', encoding='utf-8') as f:
                     f.write("ANÁLISIS DE FRECUENCIA DE PALABRAS\n")
                     f.write("=" * 50 + "\n\n")
@@ -527,13 +616,10 @@ class PDFAnalyzerApp(ctk.CTk):
                     f.write(f"Total de palabras únicas: {len(self.analyzer.word_counts)}\n")
                     f.write(f"Total de palabras: {sum(self.analyzer.word_counts.values())}\n\n")
                     
-                    if exclude_common:
-                        f.write("TODAS LAS PALABRAS (SIN PALABRAS COMUNES):\n")
-                    else:
-                        f.write("TODAS LAS PALABRAS:\n")
+                    f.write("TODAS LAS PALABRAS:\n")
                     f.write("-" * 50 + "\n")
                     
-                    all_words = self.analyzer.get_top_words(n=None, exclude_common=exclude_common)
+                    all_words = self.analyzer.get_top_words(n=None)
                     for word, count in all_words:
                         f.write(f"{word:30} {count:>10}\n")
                 
