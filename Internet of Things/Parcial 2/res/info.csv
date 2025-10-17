@@ -1,0 +1,21 @@
+nombre,apellido1,apellido2,carrera,semestre,registro,calle,numeroExt,numeroInt,colonia,municipio,estado,codigoPostal,telefono,correoElectronico,fechaNacimiento
+María,López,Ramírez,Ingeniería en Desarrollo de Software,3,12345,Av. Revolución,125,,Lomas Verdes,Guadalajara,Jalisco,44100,3334567890,maria.lopez@correo.com,2003-05-14
+Juan,Pérez,García,Ingeniería en Diseño Electrónico y Sistemas Inteligentes,6,12346,Av. Patria,324,2B,Jardines Universidad,Zapopan,Jalisco,45110,3312345678,juan.perez@correo.com,2002-08-22
+Ana,Torres,Hernández,Ingeniería Civil Sustentable,4,12347,Calz. Independencia,450,,Centro,Guadalajara,Jalisco,44100,3323456789,ana.torres@correo.com,2001-12-09
+Carlos,Mendoza,Salinas,Ingeniería Industrial,5,12348,Calle Morelos,89,,Obrera,Tlaquepaque,Jalisco,45500,3345678901,carlos.mendoza@correo.com,2000-03-27
+Lucía,Gómez,Vega,Ingeniería en Mecatrónica,2,12349,Calle Juárez,56,3A,Zona Centro,Tonalá,Jalisco,45400,3356789012,lucia.gomez@correo.com,2003-07-02
+Diego,Hernández,Castillo,Ingeniería en Bioquímica,7,12350,Av. Hidalgo,233,,El Retiro,Guadalajara,Jalisco,44280,3367890123,diego.hernandez@correo.com,2002-11-15
+Sofía,Ramírez,Ortiz,Ingeniería en Energías Renovables,8,12351,Calle 16 de Septiembre,78,,San Andrés,Tlaquepaque,Jalisco,45510,3378901234,sofía.ramírez@correo.com,2003-09-30
+Elena,Silva,Morales,Ingeniería en Sistemas Computacionales,1,12352,Av. Vallarta,145,,Ladrón de Guevara,Guadalajara,Jalisco,44110,3389012345,elena.silva@correo.com,2003-02-28
+Miguel,Castro,Ruiz,Ingeniería en Telecomunicaciones,3,12353,Calle 5 de Mayo,67,,Centro Zapopan,Zapopan,Jalisco,45100,3390123456,miguel.castro@correo.com,2003-11-10
+Valentina,Hernández,Lopez,Ingeniería en Desarrollo de Software,5,12354,Calle Magnolia,12,,Los Pinos,Guadalajara,Jalisco,44120,3312345670,valentina.hernandez@correo.com,2002-04-15
+Santiago,González,Morales,Ingeniería en Diseño Electrónico y Sistemas Inteligentes,4,12355,Av. Chapultepec,45,,Americana,Guadalajara,Jalisco,44160,3312345671,santiago.gonzalez@correo.com,2003-03-22
+Isabella,Rodríguez,Pérez,Ingeniería Civil Sustentable,6,12356,Calle Olmos,78,,El Colli,Tlaquepaque,Jalisco,45520,3312345672,isabella.rodriguez@correo.com,2001-06-10
+Sebastián,Martínez,Reyes,Ingeniería Industrial,2,12357,Av. Central,101,,Centro,Tonalá,Jalisco,45410,3312345673,sebastian.martinez@correo.com,2000-12-05
+Camila,López,Hernández,Ingeniería en Mecatrónica,8,12358,Calle Laurel,56,,Las Fuentes,Zapopan,Jalisco,45120,3312345674,camila.lopez@correo.com,2003-01-18
+Diego,Sánchez,Ramírez,Ingeniería en Bioquímica,3,12359,Av. Pino,89,,Los Olivos,Guadalajara,Jalisco,44130,3312345675,diego.sanchez@correo.com,2002-09-25
+Martina,Fernández,Gómez,Ingeniería en Energías Renovables,7,12360,Calle Jacaranda,32,,Jardines del Sol,Tlaquepaque,Jalisco,45530,3312345676,martina.fernandez@correo.com,2003-07-12
+Mateo,Jiménez,Hernández,Ingeniería en Sistemas Computacionales,1,12361,Av. Palmas,210,,Santa María,Guadalajara,Jalisco,44140,3312345677,mateo.jimenez@correo.com,2002-05-30
+Valeria,Castillo,Ruiz,Ingeniería en Telecomunicaciones,5,12362,Calle Cedro,67,,El Progreso,Guadalajara,Jalisco,44150,3312345678,valeria.castillo@correo.com,2003-11-20
+Emilio,Ramírez,Santos,Ingeniería en Desarrollo de Software,4,12363,Av. Laurel,77,,Los Olivos,Tonalá,Jalisco,45420,3312345679,emilio.ramirez@correo.com,2002-08-14
+Fernanda,Gómez,Ortega,Ingeniería en Diseño Electrónico y Sistemas Inteligentes,6,12364,Calle Encino,90,,Jardines Universidad,Zapopan,Jalisco,45130,3312345680,fernanda.gomez@correo.com,2003-06-03

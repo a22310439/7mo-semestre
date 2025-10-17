@@ -1,0 +1,2177 @@
+RESULTADOS DE BÚSQUEDA DE FRASES
+======================================================================
+
+Archivo analizado: CTCI.pdf
+Palabras buscadas: the, coding
+Total de coincidencias: 361
+Fecha: 2025-10-20 00:54:50
+
+COINCIDENCIAS ENCONTRADAS:
+----------------------------------------------------------------------
+
+[Coincidencia 1]
+  Página: 6
+  Párrafo: 1
+  Contexto: CRACKING  THE  CODING  INTERVIEW,  SIXTH  EDITION
+----------------------------------------------------------------------
+
+[Coincidencia 2]
+  Página: 8
+  Párrafo: 38
+  Contexto: VIM Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 3]
+  Página: 10
+  Párrafo: 38
+  Contexto: VIM Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 4]
+  Página: 12
+  Párrafo: 34
+  Contexto: VIM Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 5]
+  Página: 13
+  Párrafo: 14
+  Contexto: apply  those  fundamentals  to crack  the coding  interview.
+----------------------------------------------------------------------
+
+[Coincidencia 6]
+  Página: 13
+  Párrafo: 15
+  Contexto: The 6th edition  of Cracking  the Coding  Interview  updates  the Sth edition  with  70%  more  content:  additional
+----------------------------------------------------------------------
+
+[Coincidencia 7]
+  Página: 14
+  Párrafo: 28
+  Contexto: To crack  the coding  interview,  you  need  to prepare  with  real  interview  questions.  You  must  practice  on
+----------------------------------------------------------------------
+
+[Coincidencia 8]
+  Página: 14
+  Párrafo: 31
+  Contexto: Cracking  the Coding  Interview  is the result  of my first-hand  experience  interviewing  at top companies  and
+----------------------------------------------------------------------
+
+[Coincidencia 9]
+  Página: 14
+  Párrafo: 37
+  Contexto: The focus  of Cracking  the Coding  Interview  is algorithm,  coding,  and  design  questions.  Why?  Because
+----------------------------------------------------------------------
+
+[Coincidencia 10]
+  Página: 14
+  Párrafo: 43
+  Contexto: VIM Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 11]
+  Página: 15
+  Párrafo: 14
+  Contexto: Cracking  the Coding  Interview,  Cracking  the PM Interview,  Cracking  the Tech  Career,  and  CareerCup
+----------------------------------------------------------------------
+
+[Coincidencia 12]
+  Página: 16
+  Párrafo: 31
+  Contexto: 26 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 13]
+  Página: 18
+  Párrafo: 39
+  Contexto: 6 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 14]
+  Página: 20
+  Párrafo: 33
+  Contexto: 26 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 15]
+  Página: 22
+  Párrafo: 39
+  Contexto: 14 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 16]
+  Página: 24
+  Párrafo: 41
+  Contexto: 14 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 17]
+  Página: 26
+  Párrafo: 15
+  Contexto: 14 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 18]
+  Página: 28
+  Párrafo: 4
+  Contexto: • Practice  the Coding  Questions:  The number  one thing  that  SDETs  get rejected  for is coding  skills.  Although
+----------------------------------------------------------------------
+
+[Coincidencia 19]
+  Página: 28
+  Párrafo: 6
+  Contexto: to be very  strong  in coding  and algorithms.  Make  sure  that  you practice  solving  all the same  coding  and
+----------------------------------------------------------------------
+
+[Coincidencia 20]
+  Página: 28
+  Párrafo: 8
+  Contexto: • Practice  Testing  the Coding  Questions:  A very  popular  format  for SDET  questions  is "Write  code  to do X,"
+----------------------------------------------------------------------
+
+[Coincidencia 21]
+  Página: 28
+  Párrafo: 44
+  Contexto: 16 24 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 22]
+  Página: 30
+  Párrafo: 34
+  Contexto: In addition  to the above  areas,  the coding  and  algorithms  questions  that  you see in this book  are also  very
+----------------------------------------------------------------------
+
+[Coincidencia 23]
+  Página: 30
+  Párrafo: 36
+  Contexto: 18 24 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 24]
+  Página: 32
+  Párrafo: 37
+  Contexto: 24 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 25]
+  Página: 33
+  Párrafo: 34
+  Contexto: Since  writing  the last edition,  I've learned  that  a lot of interviewers  are using  Cracking  the Coding  Interview
+----------------------------------------------------------------------
+
+[Coincidencia 26]
+  Página: 34
+  Párrafo: 40
+  Contexto: 24 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 27]
+  Página: 36
+  Párrafo: 42
+  Contexto: 24 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 28]
+  Página: 38
+  Párrafo: 34
+  Contexto: 26 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 29]
+  Página: 40
+  Párrafo: 41
+  Contexto: 30 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 30]
+  Página: 42
+  Párrafo: 44
+  Contexto: 30 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 31]
+  Página: 44
+  Párrafo: 30
+  Contexto: 26 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 32]
+  Página: 46
+  Párrafo: 38
+  Contexto: Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 33]
+  Página: 47
+  Párrafo: 26
+  Contexto: • Result:  With  his confidence  raised,  he now  offered  to take  on a bunch  of the smaller  coding  work,  and
+----------------------------------------------------------------------
+
+[Coincidencia 34]
+  Página: 48
+  Párrafo: 40
+  Contexto: 36 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 35]
+  Página: 50
+  Párrafo: 30
+  Contexto: 26 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 36]
+  Página: 52
+  Párrafo: 44
+  Contexto: 40 SI Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 37]
+  Página: 54
+  Párrafo: 20
+  Contexto: 26 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 38]
+  Página: 56
+  Párrafo: 45
+  Contexto: 48 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 39]
+  Página: 58
+  Párrafo: 44
+  Contexto: 26 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 40]
+  Página: 60
+  Párrafo: 44
+  Contexto: 48 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 41]
+  Página: 62
+  Párrafo: 43
+  Contexto: 50 SI Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 42]
+  Página: 64
+  Párrafo: 40
+  Contexto: SI Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 43]
+  Página: 66
+  Párrafo: 53
+  Contexto: 54 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 44]
+  Página: 68
+  Párrafo: 51
+  Contexto: Si Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 45]
+  Página: 70
+  Párrafo: 43
+  Contexto: 54 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 46]
+  Página: 72
+  Párrafo: 31
+  Contexto: Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 47]
+  Página: 74
+  Párrafo: 54
+  Contexto: 61 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 48]
+  Página: 76
+  Párrafo: 35
+  Contexto: 61 Cracking  the Coding  Interview,  6th Edition 4. Optimize
+----------------------------------------------------------------------
+
+[Coincidencia 49]
+  Página: 78
+  Párrafo: 43
+  Contexto: 61 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 50]
+  Página: 80
+  Párrafo: 45
+  Contexto: 61 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 51]
+  Página: 82
+  Párrafo: 42
+  Contexto: Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 52]
+  Página: 84
+  Párrafo: 39
+  Contexto: 61 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 53]
+  Página: 86
+  Párrafo: 42
+  Contexto: Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 54]
+  Página: 88
+  Párrafo: 39
+  Contexto: 61 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 55]
+  Página: 90
+  Párrafo: 42
+  Contexto: 61 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 56]
+  Página: 92
+  Párrafo: 50
+  Contexto: 61 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 57]
+  Página: 94
+  Párrafo: 30
+  Contexto: ÎOO Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 58]
+  Página: 96
+  Párrafo: 41
+  Contexto: £4 86 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 59]
+  Página: 98
+  Párrafo: 17
+  Contexto: 86 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 60]
+  Página: 100
+  Párrafo: 25
+  Contexto: as Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 61]
+  Página: 102
+  Párrafo: 41
+  Contexto: 90 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 62]
+  Página: 104
+  Párrafo: 35
+  Contexto: Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 63]
+  Página: 106
+  Párrafo: 27
+  Contexto: 94 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 64]
+  Página: 108
+  Párrafo: 36
+  Contexto: ÎOO Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 65]
+  Página: 110
+  Párrafo: 43
+  Contexto: 98 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 66]
+  Página: 112
+  Párrafo: 31
+  Contexto: ÎOO Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 67]
+  Página: 114
+  Párrafo: 24
+  Contexto: 102 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 68]
+  Página: 116
+  Párrafo: 22
+  Contexto: 102 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 69]
+  Página: 118
+  Párrafo: 38
+  Contexto: 102 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 70]
+  Página: 120
+  Párrafo: 48
+  Contexto: 102 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 71]
+  Página: 122
+  Párrafo: 32
+  Contexto: 102 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 72]
+  Página: 124
+  Párrafo: 29
+  Contexto: ÎOO Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 73]
+  Página: 126
+  Párrafo: 40
+  Contexto: 114 tracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 74]
+  Página: 128
+  Párrafo: 37
+  Contexto: 116 tracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 75]
+  Página: 130
+  Párrafo: 49
+  Contexto: 118 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 76]
+  Página: 132
+  Párrafo: 39
+  Contexto: 120 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 77]
+  Página: 134
+  Párrafo: 35
+  Contexto: 122 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 78]
+  Página: 136
+  Párrafo: 23
+  Contexto: 124 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 79]
+  Página: 138
+  Párrafo: 42
+  Contexto: 126 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 80]
+  Página: 140
+  Párrafo: 19
+  Contexto: 128 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 81]
+  Página: 142
+  Párrafo: 31
+  Contexto: Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 82]
+  Página: 144
+  Párrafo: 30
+  Contexto: 1ÎÏ Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 83]
+  Página: 146
+  Párrafo: 47
+  Contexto: 134 1ÎÏ Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 84]
+  Página: 148
+  Párrafo: 36
+  Contexto: 136 1ÎÏ Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 85]
+  Página: 150
+  Párrafo: 38
+  Contexto: 1Ï8 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 86]
+  Página: 152
+  Párrafo: 39
+  Contexto: 1Ï8 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 87]
+  Página: 154
+  Párrafo: 41
+  Contexto: 1Ï8 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 88]
+  Página: 156
+  Párrafo: 41
+  Contexto: 1Ï8 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 89]
+  Página: 158
+  Párrafo: 31
+  Contexto: Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 90]
+  Página: 160
+  Párrafo: 47
+  Contexto: 148 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 91]
+  Página: 162
+  Párrafo: 35
+  Contexto: 162 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 92]
+  Página: 164
+  Párrafo: 34
+  Contexto: 1S 2 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 93]
+  Página: 166
+  Párrafo: 39
+  Contexto: 154 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 94]
+  Página: 168
+  Párrafo: 39
+  Contexto: 156 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 95]
+  Página: 170
+  Párrafo: 39
+  Contexto: 1S 2 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 96]
+  Página: 172
+  Párrafo: 52
+  Contexto: 160 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 97]
+  Página: 174
+  Párrafo: 39
+  Contexto: 162 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 98]
+  Página: 176
+  Párrafo: 33
+  Contexto: î 64 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 99]
+  Página: 178
+  Párrafo: 52
+  Contexto: 166 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 100]
+  Página: 180
+  Párrafo: 15
+  Contexto: 168 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 101]
+  Página: 182
+  Párrafo: 48
+  Contexto: 170 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 102]
+  Página: 184
+  Párrafo: 42
+  Contexto: 172 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 103]
+  Página: 186
+  Párrafo: 33
+  Contexto: Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 104]
+  Página: 188
+  Párrafo: 46
+  Contexto: 180 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 105]
+  Página: 190
+  Párrafo: 53
+  Contexto: 180 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 106]
+  Página: 192
+  Párrafo: 34
+  Contexto: 180 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 107]
+  Página: 194
+  Párrafo: 39
+  Contexto: 184 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 108]
+  Página: 196
+  Párrafo: 35
+  Contexto: 184 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 109]
+  Página: 198
+  Párrafo: 27
+  Contexto: 186 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 110]
+  Página: 200
+  Párrafo: 40
+  Contexto: 190 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 111]
+  Página: 202
+  Párrafo: 36
+  Contexto: 190 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 112]
+  Página: 204
+  Párrafo: 34
+  Contexto: 186 Cracking  the Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 113]
+  Página: 206
+  Párrafo: 47
+  Contexto: 194 206 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 114]
+  Página: 208
+  Párrafo: 52
+  Contexto: 206 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 115]
+  Página: 210
+  Párrafo: 51
+  Contexto: Ï9S 206 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 116]
+  Página: 212
+  Párrafo: 53
+  Contexto: 206 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 117]
+  Página: 214
+  Párrafo: 56
+  Contexto: 206 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 118]
+  Página: 216
+  Párrafo: 50
+  Contexto: 206 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 119]
+  Página: 218
+  Párrafo: 53
+  Contexto: 206 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 120]
+  Página: 220
+  Párrafo: 37
+  Contexto: 186 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 121]
+  Página: 222
+  Párrafo: 51
+  Contexto: Î26 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 122]
+  Página: 224
+  Párrafo: 54
+  Contexto: Î26 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 123]
+  Página: 226
+  Párrafo: 45
+  Contexto: Î26 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 124]
+  Página: 228
+  Párrafo: 53
+  Contexto: Î26 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 125]
+  Página: 230
+  Párrafo: 53
+  Contexto: Î26 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 126]
+  Página: 232
+  Párrafo: 56
+  Contexto: Î26 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 127]
+  Página: 234
+  Párrafo: 45
+  Contexto: Î26 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 128]
+  Página: 236
+  Párrafo: 33
+  Contexto: Î26 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 129]
+  Página: 238
+  Párrafo: 2
+  Contexto: Î26 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 130]
+  Página: 240
+  Párrafo: 55
+  Contexto: 2 2 S Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 131]
+  Página: 242
+  Párrafo: 66
+  Contexto: 2 2 S Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 132]
+  Página: 244
+  Párrafo: 50
+  Contexto: 2 2 S Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 133]
+  Página: 246
+  Párrafo: 53
+  Contexto: 2 2 S Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 134]
+  Página: 248
+  Párrafo: 49
+  Contexto: 2 2 S Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 135]
+  Página: 250
+  Párrafo: 39
+  Contexto: 2 2 S Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 136]
+  Página: 252
+  Párrafo: 41
+  Contexto: 2 2 S Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 137]
+  Página: 254
+  Párrafo: 46
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 138]
+  Página: 256
+  Párrafo: 49
+  Contexto: Ï44 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 139]
+  Página: 258
+  Párrafo: 48
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 140]
+  Página: 260
+  Párrafo: 45
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 141]
+  Página: 262
+  Párrafo: 32
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 142]
+  Página: 264
+  Párrafo: 53
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 143]
+  Página: 266
+  Párrafo: 54
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 144]
+  Página: 268
+  Párrafo: 51
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 145]
+  Página: 270
+  Párrafo: 46
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 146]
+  Página: 272
+  Párrafo: 44
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 147]
+  Página: 274
+  Párrafo: 32
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 148]
+  Página: 276
+  Párrafo: 57
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 149]
+  Página: 278
+  Párrafo: 42
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 150]
+  Página: 280
+  Párrafo: 33
+  Contexto: 274 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 151]
+  Página: 282
+  Párrafo: 58
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 152]
+  Página: 284
+  Párrafo: 41
+  Contexto: 274 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 153]
+  Página: 286
+  Párrafo: 30
+  Contexto: 274 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 154]
+  Página: 288
+  Párrafo: 37
+  Contexto: 276 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 155]
+  Página: 290
+  Párrafo: 47
+  Contexto: 288 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 156]
+  Página: 292
+  Párrafo: 46
+  Contexto: 288 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 157]
+  Página: 294
+  Párrafo: 50
+  Contexto: 288 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 158]
+  Página: 296
+  Párrafo: 46
+  Contexto: 288 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 159]
+  Página: 298
+  Párrafo: 44
+  Contexto: 288 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 160]
+  Página: 300
+  Párrafo: 18
+  Contexto: 288 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 161]
+  Página: 302
+  Párrafo: 42
+  Contexto: 300 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 162]
+  Página: 304
+  Párrafo: 30
+  Contexto: 292 300 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 163]
+  Página: 306
+  Párrafo: 34
+  Contexto: 294 300 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 164]
+  Página: 308
+  Párrafo: 41
+  Contexto: 296 300 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 165]
+  Página: 310
+  Párrafo: 38
+  Contexto: 300 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 166]
+  Página: 312
+  Párrafo: 56
+  Contexto: 300 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 167]
+  Página: 314
+  Párrafo: 49
+  Contexto: 302 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 168]
+  Página: 316
+  Párrafo: 53
+  Contexto: 304 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 169]
+  Página: 318
+  Párrafo: 56
+  Contexto: 306 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 170]
+  Página: 320
+  Párrafo: 55
+  Contexto: 308 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 171]
+  Página: 322
+  Párrafo: 46
+  Contexto: 310 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 172]
+  Página: 324
+  Párrafo: 48
+  Contexto: 312 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 173]
+  Página: 326
+  Párrafo: 56
+  Contexto: 314 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 174]
+  Página: 328
+  Párrafo: 58
+  Contexto: 316 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 175]
+  Página: 330
+  Párrafo: 43
+  Contexto: 330 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 176]
+  Página: 332
+  Párrafo: 55
+  Contexto: 332 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 177]
+  Página: 334
+  Párrafo: 39
+  Contexto: 322 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 178]
+  Página: 336
+  Párrafo: 58
+  Contexto: Î24 336 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 179]
+  Página: 338
+  Párrafo: 34
+  Contexto: 326 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 180]
+  Página: 340
+  Párrafo: 56
+  Contexto: 328 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 181]
+  Página: 342
+  Párrafo: 47
+  Contexto: 330 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 182]
+  Página: 344
+  Párrafo: 50
+  Contexto: 332 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 183]
+  Página: 346
+  Párrafo: 53
+  Contexto: 334 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 184]
+  Página: 348
+  Párrafo: 54
+  Contexto: 348 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 185]
+  Página: 350
+  Párrafo: 58
+  Contexto: 338 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 186]
+  Página: 352
+  Párrafo: 58
+  Contexto: 340 Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 187]
+  Página: 354
+  Párrafo: 30
+  Contexto: 342 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 188]
+  Página: 356
+  Párrafo: 50
+  Contexto: 3 54 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 189]
+  Página: 358
+  Párrafo: 47
+  Contexto: 3 54  Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 190]
+  Página: 360
+  Párrafo: 39
+  Contexto: Cracking  the  Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 191]
+  Página: 362
+  Párrafo: 35
+  Contexto: Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 192]
+  Página: 364
+  Párrafo: 48
+  Contexto: Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 193]
+  Página: 366
+  Párrafo: 57
+  Contexto: 3 54 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 194]
+  Página: 368
+  Párrafo: 49
+  Contexto: 3 54  Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 195]
+  Página: 370
+  Párrafo: 95
+  Contexto: 3 54  Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 196]
+  Página: 372
+  Párrafo: 53
+  Contexto: 3 54  Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 197]
+  Página: 374
+  Párrafo: 45
+  Contexto: 3 54 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 198]
+  Página: 376
+  Párrafo: 39
+  Contexto: 370 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 199]
+  Página: 378
+  Párrafo: 49
+  Contexto: 370 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 200]
+  Página: 380
+  Párrafo: 48
+  Contexto: 168 370 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 201]
+  Página: 382
+  Párrafo: 50
+  Contexto: 370 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 202]
+  Página: 384
+  Párrafo: 32
+  Contexto: 372 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 203]
+  Página: 386
+  Párrafo: 41
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 204]
+  Página: 388
+  Párrafo: 57
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 205]
+  Página: 390
+  Párrafo: 41
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 206]
+  Página: 392
+  Párrafo: 35
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 207]
+  Página: 394
+  Párrafo: 55
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 208]
+  Página: 396
+  Párrafo: 41
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 209]
+  Página: 398
+  Párrafo: 26
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 210]
+  Página: 400
+  Párrafo: 39
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 211]
+  Página: 402
+  Párrafo: 30
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 212]
+  Página: 404
+  Párrafo: 42
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 213]
+  Página: 406
+  Párrafo: 40
+  Contexto: 394 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 214]
+  Página: 408
+  Párrafo: 35
+  Contexto: 372 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 215]
+  Página: 410
+  Párrafo: 45
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 216]
+  Página: 412
+  Párrafo: 47
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 217]
+  Página: 414
+  Párrafo: 38
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 218]
+  Página: 416
+  Párrafo: 43
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 219]
+  Página: 418
+  Párrafo: 52
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 220]
+  Página: 420
+  Párrafo: 43
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 221]
+  Página: 422
+  Párrafo: 54
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 222]
+  Página: 424
+  Párrafo: 36
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 223]
+  Página: 426
+  Párrafo: 61
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 224]
+  Página: 428
+  Párrafo: 41
+  Contexto: 416 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 225]
+  Página: 430
+  Párrafo: 41
+  Contexto: 418 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 226]
+  Página: 432
+  Párrafo: 41
+  Contexto: 420 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 227]
+  Página: 434
+  Párrafo: 38
+  Contexto: 372 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 228]
+  Página: 436
+  Párrafo: 42
+  Contexto: 420 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 229]
+  Página: 438
+  Párrafo: 48
+  Contexto: 426 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 230]
+  Página: 440
+  Párrafo: 51
+  Contexto: 420 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 231]
+  Página: 442
+  Párrafo: 47
+  Contexto: 420 Cracking  the Coding  interview,  6th Edition pg 164
+----------------------------------------------------------------------
+
+[Coincidencia 232]
+  Página: 444
+  Párrafo: 37
+  Contexto: Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 233]
+  Página: 446
+  Párrafo: 49
+  Contexto: 434 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 234]
+  Página: 448
+  Párrafo: 45
+  Contexto: 436 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 235]
+  Página: 450
+  Párrafo: 45
+  Contexto: 438 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 236]
+  Página: 452
+  Párrafo: 52
+  Contexto: 440 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 237]
+  Página: 454
+  Párrafo: 42
+  Contexto: 442 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 238]
+  Página: 456
+  Párrafo: 33
+  Contexto: 444 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 239]
+  Página: 458
+  Párrafo: 48
+  Contexto: 446 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 240]
+  Página: 460
+  Párrafo: 43
+  Contexto: Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 241]
+  Página: 462
+  Párrafo: 56
+  Contexto: 420 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 242]
+  Página: 464
+  Párrafo: 49
+  Contexto: 420 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 243]
+  Página: 466
+  Párrafo: 58
+  Contexto: 420 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 244]
+  Página: 470
+  Párrafo: 43
+  Contexto: Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 245]
+  Página: 472
+  Párrafo: 55
+  Contexto: Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 246]
+  Página: 474
+  Párrafo: 31
+  Contexto: 462 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 247]
+  Página: 476
+  Párrafo: 57
+  Contexto: 464 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 248]
+  Página: 478
+  Párrafo: 46
+  Contexto: 466 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 249]
+  Página: 480
+  Párrafo: 54
+  Contexto: 468 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 250]
+  Página: 482
+  Párrafo: 56
+  Contexto: 470 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 251]
+  Página: 484
+  Párrafo: 56
+  Contexto: 472 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 252]
+  Página: 486
+  Párrafo: 44
+  Contexto: 474 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 253]
+  Página: 488
+  Párrafo: 53
+  Contexto: 476 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 254]
+  Página: 490
+  Párrafo: 51
+  Contexto: 478 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 255]
+  Página: 492
+  Párrafo: 48
+  Contexto: 480 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 256]
+  Página: 494
+  Párrafo: 56
+  Contexto: 482 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 257]
+  Página: 496
+  Párrafo: 51
+  Contexto: 484 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 258]
+  Página: 498
+  Párrafo: 50
+  Contexto: 486 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 259]
+  Página: 500
+  Párrafo: 40
+  Contexto: 488 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 260]
+  Página: 502
+  Párrafo: 50
+  Contexto: 5 34 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 261]
+  Página: 504
+  Párrafo: 50
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 262]
+  Página: 506
+  Párrafo: 48
+  Contexto: 486 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 263]
+  Página: 508
+  Párrafo: 43
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 264]
+  Página: 510
+  Párrafo: 42
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 265]
+  Página: 512
+  Párrafo: 50
+  Contexto: 500 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 266]
+  Página: 514
+  Párrafo: 56
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 267]
+  Página: 516
+  Párrafo: 53
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 268]
+  Página: 518
+  Párrafo: 53
+  Contexto: S06 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 269]
+  Página: 520
+  Párrafo: 56
+  Contexto: 492 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 270]
+  Página: 522
+  Párrafo: 52
+  Contexto: 510 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 271]
+  Página: 524
+  Párrafo: 42
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 272]
+  Página: 526
+  Párrafo: 58
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 273]
+  Página: 528
+  Párrafo: 58
+  Contexto: 516 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 274]
+  Página: 530
+  Párrafo: 43
+  Contexto: 518 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 275]
+  Página: 532
+  Párrafo: 47
+  Contexto: 5Î0 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 276]
+  Página: 534
+  Párrafo: 30
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 277]
+  Página: 536
+  Párrafo: 51
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 278]
+  Página: 538
+  Párrafo: 58
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 279]
+  Página: 540
+  Párrafo: 57
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 280]
+  Página: 542
+  Párrafo: 33
+  Contexto: 5Î0 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 281]
+  Página: 544
+  Párrafo: 48
+  Contexto: 532 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 282]
+  Página: 546
+  Párrafo: 50
+  Contexto: 5 34 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 283]
+  Página: 548
+  Párrafo: 51
+  Contexto: 492 Cracking  the  Coding  Interview,  6th  Edition
+----------------------------------------------------------------------
+
+[Coincidencia 284]
+  Página: 550
+  Párrafo: 53
+  Contexto: 5Î8 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 285]
+  Página: 552
+  Párrafo: 48
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 286]
+  Página: 554
+  Párrafo: 54
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 287]
+  Página: 556
+  Párrafo: 38
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 288]
+  Página: 558
+  Párrafo: 45
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 289]
+  Página: 560
+  Párrafo: 53
+  Contexto: 492 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 290]
+  Página: 562
+  Párrafo: 41
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 291]
+  Página: 564
+  Párrafo: 52
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 292]
+  Página: 566
+  Párrafo: 46
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 293]
+  Página: 568
+  Párrafo: 51
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 294]
+  Página: 570
+  Párrafo: 51
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 295]
+  Página: 572
+  Párrafo: 34
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 296]
+  Página: 574
+  Párrafo: 54
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 297]
+  Página: 576
+  Párrafo: 54
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 298]
+  Página: 578
+  Párrafo: 45
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 299]
+  Página: 580
+  Párrafo: 50
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 300]
+  Página: 582
+  Párrafo: 54
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 301]
+  Página: 584
+  Párrafo: 49
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 302]
+  Página: 586
+  Párrafo: 46
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 303]
+  Página: 588
+  Párrafo: 33
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 304]
+  Página: 590
+  Párrafo: 49
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 305]
+  Página: 592
+  Párrafo: 58
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 306]
+  Página: 594
+  Párrafo: 35
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 307]
+  Página: 596
+  Párrafo: 49
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 308]
+  Página: 598
+  Párrafo: 51
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 309]
+  Página: 600
+  Párrafo: 53
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 310]
+  Página: 602
+  Párrafo: 58
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 311]
+  Página: 604
+  Párrafo: 48
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 312]
+  Página: 606
+  Párrafo: 48
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 313]
+  Página: 608
+  Párrafo: 34
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 314]
+  Página: 610
+  Párrafo: 44
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 315]
+  Página: 612
+  Párrafo: 45
+  Contexto: Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 316]
+  Página: 614
+  Párrafo: 47
+  Contexto: Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 317]
+  Página: 616
+  Párrafo: 57
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 318]
+  Página: 618
+  Párrafo: 58
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 319]
+  Página: 620
+  Párrafo: 48
+  Contexto: 55 S Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 320]
+  Página: 624
+  Párrafo: 45
+  Contexto: 612 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 321]
+  Página: 626
+  Párrafo: 47
+  Contexto: 614 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 322]
+  Página: 628
+  Párrafo: 48
+  Contexto: 614 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 323]
+  Página: 630
+  Párrafo: 57
+  Contexto: 614 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 324]
+  Página: 632
+  Párrafo: 46
+  Contexto: 614 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 325]
+  Página: 634
+  Párrafo: 49
+  Contexto: 614 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 326]
+  Página: 636
+  Párrafo: 46
+  Contexto: 614 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 327]
+  Página: 642
+  Párrafo: 51
+  Contexto: 6î0 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 328]
+  Página: 644
+  Párrafo: 40
+  Contexto: 6î0 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 329]
+  Página: 646
+  Párrafo: 31
+  Contexto: 6î0 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 330]
+  Página: 648
+  Párrafo: 39
+  Contexto: 6î0 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 331]
+  Página: 650
+  Párrafo: 18
+  Contexto: 6î0 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 332]
+  Página: 652
+  Párrafo: 32
+  Contexto: 6î0 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 333]
+  Página: 654
+  Párrafo: 23
+  Contexto: 6î0 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 334]
+  Página: 656
+  Párrafo: 42
+  Contexto: 6î0 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 335]
+  Página: 658
+  Párrafo: 41
+  Contexto: 646 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 336]
+  Página: 660
+  Párrafo: 54
+  Contexto: 648 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 337]
+  Página: 662
+  Párrafo: 57
+  Contexto: 648 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 338]
+  Página: 666
+  Párrafo: 43
+  Contexto: 654 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 339]
+  Página: 668
+  Párrafo: 42
+  Contexto: 654 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 340]
+  Página: 670
+  Párrafo: 40
+  Contexto: 654 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 341]
+  Página: 672
+  Párrafo: 43
+  Contexto: 654 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 342]
+  Página: 674
+  Párrafo: 29
+  Contexto: 646 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 343]
+  Página: 676
+  Párrafo: 43
+  Contexto: 664 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 344]
+  Página: 678
+  Párrafo: 42
+  Contexto: 664 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 345]
+  Página: 680
+  Párrafo: 40
+  Contexto: 664 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 346]
+  Página: 682
+  Párrafo: 42
+  Contexto: 664 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 347]
+  Página: 684
+  Párrafo: 42
+  Contexto: 664 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 348]
+  Página: 686
+  Párrafo: 42
+  Contexto: 664 Cracking  the Coding  interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 349]
+  Página: 688
+  Párrafo: 30
+  Contexto: 646 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 350]
+  Página: 690
+  Párrafo: 33
+  Contexto: 678 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 351]
+  Página: 692
+  Párrafo: 38
+  Contexto: 680 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 352]
+  Página: 694
+  Párrafo: 41
+  Contexto: 680 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 353]
+  Página: 696
+  Párrafo: 40
+  Contexto: 680 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 354]
+  Página: 698
+  Párrafo: 42
+  Contexto: 680 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 355]
+  Página: 700
+  Párrafo: 42
+  Contexto: 680 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 356]
+  Página: 702
+  Párrafo: 44
+  Contexto: 680 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 357]
+  Página: 704
+  Párrafo: 41
+  Contexto: 680 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 358]
+  Página: 706
+  Párrafo: 42
+  Contexto: 680 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 359]
+  Página: 708
+  Párrafo: 19
+  Contexto: In addition  to Cracking  the Coding  Interview,  Gayle  has written
+----------------------------------------------------------------------
+
+[Coincidencia 360]
+  Página: 708
+  Párrafo: 34
+  Contexto: 646 Cracking  the Coding  Interview,  6th Edition
+----------------------------------------------------------------------
+
+[Coincidencia 361]
+  Página: 712
+  Párrafo: 8
+  Contexto: Cracking  the Coding  Interview.  6th Edition  is here  to help
+----------------------------------------------------------------------
+
