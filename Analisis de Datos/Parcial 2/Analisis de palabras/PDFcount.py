@@ -11,6 +11,8 @@ import re
 import os
 import time
 from typing import Dict, List, Tuple
+from PIL import Image, ImageTk
+import fitz 
 
 # Configurar el tema de customtkinter
 ctk.set_appearance_mode("dark")
@@ -208,6 +210,19 @@ class PDFWordAnalyzer:
         else:
             return self.word_counts.most_common()
 
+    def get_word_frequency_per_page(self, word: str) -> List[Tuple[int, int]]:
+        word = word.lower().strip()
+        frequencies = []
+
+        for page_data in self.pages_data:
+            page_num = page_data['page_num']
+            page_text = " ".join(page_data['paragraphs']).lower()
+            count = len(re.findall(rf'\b{re.escape(word)}\b', page_text))
+            frequencies.append((page_num, count))
+        
+        return frequencies
+
+
 class ScrollableHeatmap(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
@@ -242,6 +257,123 @@ class ScrollableHeatmap(ctk.CTkFrame):
     def get_frame(self):
         return self.scrollable_frame
 
+class PDFViewer(ctk.CTkFrame):
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
+        
+        # Frame de controles
+        self.control_frame = ctk.CTkFrame(self)
+        self.control_frame.pack(fill="x", padx=5, pady=5)
+        
+        self.prev_button = ctk.CTkButton(
+            self.control_frame, 
+            text="◀ Anterior", 
+            command=self.prev_page,
+            width=100
+        )
+        self.prev_button.pack(side="left", padx=5)
+        
+        self.page_label = ctk.CTkLabel(self.control_frame, text="Página: -/-")
+        self.page_label.pack(side="left", padx=10, expand=True)
+        
+        self.next_button = ctk.CTkButton(
+            self.control_frame, 
+            text="Siguiente ▶", 
+            command=self.next_page,
+            width=100
+        )
+        self.next_button.pack(side="right", padx=5)
+        
+        # Canvas para mostrar el PDF (sin scrollbars)
+        self.canvas = Canvas(self, bg='#2b2b2b', highlightthickness=0)
+        self.canvas.pack(fill="both", expand=True, padx=5, pady=5)
+        
+        self.pdf_document = None
+        self.current_page = 0
+        self.total_pages = 0
+        
+        # Bind para ajustar cuando se redimensiona la ventana
+        self.canvas.bind("<Configure>", self.on_canvas_resize)
+        
+    def on_canvas_resize(self, event):
+        """Redibuja la página cuando el canvas cambia de tamaño"""
+        if self.pdf_document and self.total_pages > 0:
+            self.show_page()
+        
+    def load_pdf(self, pdf_path):
+        try:
+            self.pdf_document = fitz.open(pdf_path)
+            self.total_pages = len(self.pdf_document)
+            self.current_page = 0
+            self.show_page()
+            self.prev_button.configure(state="normal")
+            self.next_button.configure(state="normal")
+        except Exception as e:
+            messagebox.showerror("Error", f"Error al cargar PDF: {str(e)}")
+    
+    def show_page(self):
+        if not self.pdf_document or self.total_pages == 0:
+            return
+        
+        # Obtener dimensiones del canvas
+        canvas_width = self.canvas.winfo_width()
+        canvas_height = self.canvas.winfo_height()
+        
+        # Si el canvas aún no tiene dimensiones, esperar
+        if canvas_width <= 1 or canvas_height <= 1:
+            self.canvas.after(100, self.show_page)
+            return
+        
+        page = self.pdf_document[self.current_page]
+        
+        # Obtener dimensiones originales de la página
+        page_rect = page.rect
+        page_width = page_rect.width
+        page_height = page_rect.height
+        
+        # Calcular zoom para ajustar la página al canvas (con margen)
+        margin = 20
+        zoom_width = (canvas_width - margin) / page_width
+        zoom_height = (canvas_height - margin) / page_height
+        zoom = min(zoom_width, zoom_height)
+        
+        # Renderizar página con el zoom calculado
+        mat = fitz.Matrix(zoom, zoom)
+        pix = page.get_pixmap(matrix=mat)
+        
+        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+        photo = ImageTk.PhotoImage(img)
+        
+        # Limpiar canvas
+        self.canvas.delete("all")
+        
+        # Calcular posición para centrar
+        x_center = (canvas_width - pix.width) // 2
+        y_center = (canvas_height - pix.height) // 2
+        
+        # Crear imagen centrada
+        self.canvas.create_image(x_center, y_center, anchor="nw", image=photo)
+        self.canvas.image = photo
+        
+        self.page_label.configure(text=f"Página: {self.current_page + 1}/{self.total_pages}")
+    
+    def next_page(self):
+        if self.current_page < self.total_pages - 1:
+            self.current_page += 1
+            self.show_page()
+    
+    def prev_page(self):
+        if self.current_page > 0:
+            self.current_page -= 1
+            self.show_page()
+    
+    def close_pdf(self):
+        if self.pdf_document:
+            self.pdf_document.close()
+            self.pdf_document = None
+            self.canvas.delete("all")
+            self.page_label.configure(text="Página: -/-")
+
 class PDFAnalyzerApp(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -253,6 +385,8 @@ class PDFAnalyzerApp(ctk.CTk):
         
         self.analyzer = None
         self.pdf_path = None
+        self.last_search_results = None
+        self.last_search_words = None
         
         self.setup_ui()
         
@@ -293,13 +427,23 @@ class PDFAnalyzerApp(ctk.CTk):
         
         self.save_button = ctk.CTkButton(
             self.control_frame, 
-            text="Guardar Resultados", 
+            text="Guardar Análisis", 
             command=self.save_results,
             width=150,
             height=40,
             state="disabled"
         )
         self.save_button.pack(side="left", padx=10)
+        
+        self.save_search_button = ctk.CTkButton(
+            self.control_frame, 
+            text="Guardar Búsqueda", 
+            command=self.save_search_results,
+            width=150,
+            height=40,
+            state="disabled"
+        )
+        self.save_search_button.pack(side="left", padx=10)
         
         # Frame contenedor principal dividido en dos columnas
         self.content_container = ctk.CTkFrame(self.main_container)
@@ -374,25 +518,48 @@ class PDFAnalyzerApp(ctk.CTk):
         self.search_results = ctk.CTkTextbox(self.search_frame, height=200)
         self.search_results.pack(fill="both", expand=True, padx=10, pady=(0, 10))
         
-        # COLUMNA DERECHA: Mapa de Calor
+        # COLUMNA DERECHA: Dividida horizontalmente (lado a lado)
         self.right_column = ctk.CTkFrame(self.content_container)
         self.right_column.pack(side="right", fill="both", expand=True)
         
-        self.heatmap_label = ctk.CTkLabel(self.right_column, text="Mapa de Calor", font=("Arial", 16, "bold"))
-        self.heatmap_label.pack(pady=10)
+        # ====== SECCIÓN IZQUIERDA: MAPA DE CALOR ======
+        self.heatmap_section = ctk.CTkFrame(self.right_column)
+        self.heatmap_section.pack(side="left", fill="both", expand=True, padx=(5, 2), pady=5)
         
-        self.info_label = ctk.CTkLabel(self.right_column, text="", font=("Arial", 12))
+        self.heatmap_label = ctk.CTkLabel(
+            self.heatmap_section, 
+            text="🔥 Mapa de Calor de Frecuencias", 
+            font=("Arial", 14, "bold")
+        )
+        self.heatmap_label.pack(pady=5)
+        
+        self.info_label = ctk.CTkLabel(self.heatmap_section, text="", font=("Arial", 12))
         self.info_label.pack()
         
-        self.canvas_frame = ScrollableHeatmap(self.right_column)
-        self.canvas_frame.pack(fill="both", expand=True, padx=10, pady=(0, 10))
+        self.canvas_frame = ScrollableHeatmap(self.heatmap_section)
+        self.canvas_frame.pack(fill="both", expand=True, padx=5, pady=(0, 5))
         
         self.no_data_label = ctk.CTkLabel(
             self.canvas_frame.get_frame(), 
             text="Selecciona un PDF y haz clic en 'Analizar' para ver el mapa de calor",
-            font=("Arial", 14)
+            font=("Arial", 12)
         )
-        self.no_data_label.pack(expand=True, pady=100)
+        self.no_data_label.pack(expand=True, pady=50)
+        
+        # ====== SECCIÓN DERECHA: VISUALIZADOR PDF ======
+        self.viewer_section = ctk.CTkFrame(self.right_column, width=700)
+        self.viewer_section.pack(side="right", fill="both", expand=False, padx=(2, 5), pady=5)
+        self.viewer_section.pack_propagate(False)
+        
+        self.viewer_title = ctk.CTkLabel(
+            self.viewer_section, 
+            text="📄 Visualizador PDF", 
+            font=("Arial", 14, "bold")
+        )
+        self.viewer_title.pack(pady=5)
+        
+        self.pdf_viewer = PDFViewer(self.viewer_section)
+        self.pdf_viewer.pack(fill="both", expand=True, padx=5, pady=(0, 5))
     
     def select_pdf(self):
         filename = filedialog.askopenfilename(
@@ -406,6 +573,9 @@ class PDFAnalyzerApp(ctk.CTk):
             self.analyze_button.configure(state="normal")
             self.log_text.delete("0.0", "end")
             self.log_text.insert("0.0", f"Archivo seleccionado: {filename}\n")
+            
+            # Cargar PDF en el visualizador
+            self.pdf_viewer.load_pdf(filename)
     
     def update_log(self, message):
         self.log_text.insert("end", f"{message}\n")
@@ -473,6 +643,8 @@ class PDFAnalyzerApp(ctk.CTk):
     def run_search(self, words):
         try:
             results = self.analyzer.search_phrase(words)
+            self.last_search_results = results
+            self.last_search_words = words
             self.after(0, lambda: self.display_search_results(words, results))
         except Exception as e:
             self.after(0, lambda: messagebox.showerror("Error", f"Error en la búsqueda: {str(e)}"))
@@ -489,10 +661,77 @@ class PDFAnalyzerApp(ctk.CTk):
         
         if not results:
             self.search_results.insert("end", "No se encontraron coincidencias.\n")
+            self.save_search_button.configure(state="disabled")
         else:
             for i, result in enumerate(results, 1):
                 self.search_results.insert("end", f"[{i}] Página {result['page']}, Párrafo {result['paragraph']}\n")
                 self.search_results.insert("end", f"Contexto: {result['context']}\n\n")
+            self.save_search_button.configure(state="normal")
+
+        # === Mostrar gráfico de frecuencia por página con paginación ===
+        if len(words) == 1:
+            freq_data = self.analyzer.get_word_frequency_per_page(words[0])
+            if freq_data:
+                word = words[0]
+                total_pages = len(freq_data)
+                pages_per_view = 20
+                current_index = [0]  # usamos lista para que sea mutable dentro de funciones anidadas
+
+                # Crear ventana emergente
+                win = ctk.CTkToplevel(self)
+                win.title(f"Frecuencia por página: {word}")
+                win.geometry("900x500")
+
+                # === Contenedor gráfico ===
+                frame_chart = ctk.CTkFrame(win)
+                frame_chart.pack(fill="both", expand=True, padx=10, pady=10)
+
+                figure, ax = plt.subplots(figsize=(8, 3), facecolor='#212121')
+                canvas = FigureCanvasTkAgg(figure, master=frame_chart)
+                canvas.get_tk_widget().pack(fill="both", expand=True)
+
+                # === Función para actualizar gráfico ===
+                def update_chart():
+                    ax.clear()
+                    start = current_index[0]
+                    end = min(start + pages_per_view, total_pages)
+                    subset = freq_data[start:end]
+                    pages, counts = zip(*subset)
+
+                    ax.bar(pages, counts, color='skyblue')
+                    ax.set_xticks(pages)
+                    ax.set_title(f"Frecuencia de '{word}' (páginas {pages[0]}–{pages[-1]})", color='white')
+                    ax.set_xlabel("Página", color='white')
+                    ax.set_ylabel("Frecuencia", color='white')
+                    ax.tick_params(axis='x', colors='white')
+                    ax.tick_params(axis='y', colors='white')
+                    ax.set_facecolor('#212121')
+                    figure.tight_layout()
+                    canvas.draw()
+
+        # === Botones de navegación ===
+        def next_block():
+            if current_index[0] + pages_per_view < total_pages:
+                current_index[0] += pages_per_view
+                update_chart()
+
+        def prev_block():
+            if current_index[0] - pages_per_view >= 0:
+                current_index[0] -= pages_per_view
+                update_chart()
+
+        frame_buttons = ctk.CTkFrame(win)
+        frame_buttons.pack(pady=5)
+
+        prev_button = ctk.CTkButton(frame_buttons, text="◀ Anterior", command=prev_block)
+        next_button = ctk.CTkButton(frame_buttons, text="Siguiente ▶", command=next_block)
+
+        prev_button.pack(side="left", padx=10)
+        next_button.pack(side="right", padx=10)
+
+        # Mostrar el primer bloque
+        update_chart()
+
     
     def update_stats(self):
         if self.analyzer and self.analyzer.word_counts:
@@ -602,7 +841,8 @@ class PDFAnalyzerApp(ctk.CTk):
         
         filename = filedialog.asksaveasfilename(
             defaultextension=".txt",
-            filetypes=[("Text files", "*.txt"), ("All files", "*.*")]
+            filetypes=[("Text files", "*.txt"), ("All files", "*.*")],
+            initialfile="analisis_palabras.txt"
         )
         
         if filename:
@@ -623,7 +863,45 @@ class PDFAnalyzerApp(ctk.CTk):
                     for word, count in all_words:
                         f.write(f"{word:30} {count:>10}\n")
                 
-                messagebox.showinfo("Éxito", f"Resultados guardados en {filename}")
+                messagebox.showinfo("Éxito", f"Análisis guardado en:\n{filename}")
+            except Exception as e:
+                messagebox.showerror("Error", f"Error al guardar el archivo: {str(e)}")
+    
+    def save_search_results(self):
+        if not self.last_search_results or not self.last_search_words:
+            messagebox.showerror("Error", "No hay resultados de búsqueda para guardar")
+            return
+        
+        filename = filedialog.asksaveasfilename(
+            defaultextension=".txt",
+            filetypes=[("Text files", "*.txt"), ("All files", "*.*")],
+            initialfile="busqueda_frases.txt"
+        )
+        
+        if filename:
+            try:
+                with open(filename, 'w', encoding='utf-8') as f:
+                    f.write("RESULTADOS DE BÚSQUEDA DE FRASES\n")
+                    f.write("=" * 70 + "\n\n")
+                    f.write(f"Archivo analizado: {os.path.basename(self.pdf_path)}\n")
+                    f.write(f"Palabras buscadas: {', '.join(self.last_search_words)}\n")
+                    f.write(f"Total de coincidencias: {len(self.last_search_results)}\n")
+                    f.write(f"Fecha: {time.strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+                    
+                    if not self.last_search_results:
+                        f.write("No se encontraron coincidencias.\n")
+                    else:
+                        f.write("COINCIDENCIAS ENCONTRADAS:\n")
+                        f.write("-" * 70 + "\n\n")
+                        
+                        for i, result in enumerate(self.last_search_results, 1):
+                            f.write(f"[Coincidencia {i}]\n")
+                            f.write(f"  Página: {result['page']}\n")
+                            f.write(f"  Párrafo: {result['paragraph']}\n")
+                            f.write(f"  Contexto: {result['context']}\n")
+                            f.write("-" * 70 + "\n\n")
+                
+                messagebox.showinfo("Éxito", f"Resultados de búsqueda guardados en:\n{filename}")
             except Exception as e:
                 messagebox.showerror("Error", f"Error al guardar el archivo: {str(e)}")
 
