@@ -1,0 +1,26 @@
+CENTRO DE ENSEÑANZA TÉCNICA INDUSTRIAL
+Departamento de Servicios Escolares
+
+Guadalajara, Jalisco, a {fechaActual}
+
+ASUNTO: Constancia de estudios
+
+A quien corresponda:
+
+Por medio de la presente se hace constar que el/la C. {nombre} {apellido1} {apellido2}, con registro {registro}, con fecha de nacimiento {fechaNacimiento} 
+y edad de {edad} años, es estudiante del Centro de Enseñanza Técnica Industrial, 
+adscrito(a) al programa educativo de {carrera}, actualmente cursando el semestre {semestre} desempeñándose con responsabilidad y dedicación.
+
+Sus datos de contacto registrados son:
+- Dirección: {calle} #{numeroExt}{numeroIntTexto}, Col. {colonia}, {municipio}, {estado}, C.P. {codigoPostal}
+- Teléfono: {telefono}
+- Correo electrónico: {correoElectronico}
+
+Se extiende la presente constancia a solicitud del interesado(a) para los fines que estime convenientes.
+
+Atentamente,
+
+______________________________
+Ing. Jesús Alberto Aréchiga Carrillo
+Director de Servicios Escolares
+Centro de Enseñanza Técnica Industrial
