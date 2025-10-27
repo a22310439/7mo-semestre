@@ -458,7 +458,7 @@ class PDFAnalyzerApp(ctk.CTk):
         self.log_label = ctk.CTkLabel(self.left_column, text="Registro de Análisis", font=("Arial", 16, "bold"))
         self.log_label.pack(pady=10)
         
-        self.log_text = ctk.CTkTextbox(self.left_column, height=300)
+        self.log_text = ctk.CTkTextbox(self.left_column, height=150)
         self.log_text.pack(fill="both", expand=True, padx=10, pady=(0, 10))
         
         # Estadísticas
